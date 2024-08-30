@@ -376,13 +376,34 @@ redLink();
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
+const addLi = () => {
+  let ul = document.getElementById("myList");
+  let li = document.createElement("li");
+  li.innerText = "prova";
+  ul.appendChild(li);
+};
+addLi();
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+const removeLi = () => {
+  let ul = document.getElementById("myList");
+  ul.innerHTML = "";
+};
+removeLi();
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+
+const addClassToTr = () => {
+  let tr = document.querySelectorAll("tr");
+  tr.forEach((tr) => {
+    tr.classList.add("test");
+  });
+};
+addClassToTr();
 
 // [EXTRA] JS Avanzato
 
@@ -398,6 +419,15 @@ redLink();
 
 */
 
+const halfTree = (num) => {
+  let hash = "";
+  for (let i = 0; i < num; i++) {
+    hash += "*";
+    console.log(hash);
+  }
+};
+
+halfTree(15);
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -410,9 +440,30 @@ redLink();
 
 */
 
+// const tree = (num) => {
+//   let hash = "";
+//   for (let i = 0; i < num; i++) {
+//     hash += "*";
+//     console.log(hash);
+//   }
+// };
+
+// tree(15);
+
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+
+const isItPrime = (num) => {
+  for (let i = 0; i <= num; i++) {
+    if (num % 2 === 0 || num % 3 === 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+};
+console.log(isItPrime());
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
